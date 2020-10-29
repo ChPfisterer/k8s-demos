@@ -515,8 +515,8 @@ spec:
               bpfDisableUnprivileged:
                 description: 'BPFDisableUnprivileged, if enabled, Felix sets the kernel.unprivileged_bpf_disabled
                   sysctl to disable unprivileged use of BPF.  This ensures that unprivileged
-                  users cannot access Calico''s BPF maps and cannot insert their own
-                  BPF programs to interfere with Calico''s. [Default: true]'
+                  users cannot access Calico s BPF maps and cannot insert their own
+                  BPF programs to interfere with Calico s. [Default: true]'
                 type: boolean
               bpfEnabled:
                 description: 'BPFEnabled, if enabled Felix will use the BPF dataplane.
@@ -538,13 +538,13 @@ spec:
                 type: boolean
               bpfKubeProxyIptablesCleanupEnabled:
                 description: 'BPFKubeProxyIptablesCleanupEnabled, if enabled in BPF
-                  mode, Felix will proactively clean up the upstream Kubernetes kube-proxy''s
+                  mode, Felix will proactively clean up the upstream Kubernetes kube-proxys
                   iptables chains.  Should only be enabled if kube-proxy is not running.  [Default:
                   true]'
                 type: boolean
               bpfKubeProxyMinSyncPeriod:
                 description: 'BPFKubeProxyMinSyncPeriod, in BPF mode, controls the
-                  minimum time between updates to the dataplane for Felix''s embedded
+                  minimum time between updates to the dataplane for Felix s embedded
                   kube-proxy.  Lower values give reduced set-up latency.  Higher values
                   reduce Felix CPU usage by batching up more work.  [Default: 1s]'
                 type: string
@@ -666,8 +666,8 @@ spec:
                 type: string
               genericXDPEnabled:
                 description: 'GenericXDPEnabled enables Generic XDP so network cards
-                  that don''t support XDP offload or driver modes can use XDP. This
-                  is not recommended since it doesn''t provide better performance
+                  that don t support XDP offload or driver modes can use XDP. This
+                  is not recommended since it doesn t provide better performance
                   than iptables. [Default: false]'
                 type: boolean
               healthEnabled:
@@ -679,13 +679,13 @@ spec:
               interfaceExclude:
                 description: 'InterfaceExclude is a comma-separated list of interfaces
                   that Felix should exclude when monitoring for host endpoints. The
-                  default value ensures that Felix ignores Kubernetes'' IPVS dummy
+                  default value ensures that Felix ignores Kubernetes  IPVS dummy
                   interface, which is used internally by kube-proxy. If you want to
                   exclude multiple interface names using a single value, the list
                   supports regular expressions. For regular expressions you must wrap
-                  the value with ''/''. For example having values ''/^kube/,veth1''
-                  will exclude all interfaces that begin with ''kube'' and also the
-                  interface ''veth1''. [Default: kube-ipvs0]'
+                  the value with  / . For example having values  /^kube/,veth1 
+                  will exclude all interfaces that begin with  kube  and also the
+                  interface  veth1 . [Default: kube-ipvs0]'
                 type: string
               interfacePrefix:
                 description: 'InterfacePrefix is the interface name prefix that identifies
@@ -968,7 +968,7 @@ spec:
               xdpRefreshInterval:
                 description: 'XDPRefreshInterval is the period at which Felix re-checks
                   all XDP state to ensure that no other process has accidentally broken
-                  Calico''s BPF maps or attached programs. Set to 0 to disable XDP
+                  Calico s BPF maps or attached programs. Set to 0 to disable XDP
                   refresh. [Default: 90s]'
                 type: string
             type: object
@@ -1167,7 +1167,7 @@ spec:
                         paths:
                           description: 'Paths is an optional field that restricts
                             the rule to apply to HTTP requests that use one of the
-                            listed HTTP Paths. Multiple paths are OR''d together.
+                            listed HTTP Paths. Multiple paths are OR d together.
                             e.g: - exact: /foo - prefix: /bar NOTE: Each entry may
                             ONLY specify either a `exact` or a `prefix` match. The
                             validator will check for it.'
@@ -1498,7 +1498,7 @@ spec:
                         paths:
                           description: 'Paths is an optional field that restricts
                             the rule to apply to HTTP requests that use one of the
-                            listed HTTP Paths. Multiple paths are OR''d together.
+                            listed HTTP Paths. Multiple paths are OR d together.
                             e.g: - exact: /foo - prefix: /bar NOTE: Each entry may
                             ONLY specify either a `exact` or a `prefix` match. The
                             validator will check for it.'
@@ -2638,7 +2638,7 @@ spec:
                         paths:
                           description: 'Paths is an optional field that restricts
                             the rule to apply to HTTP requests that use one of the
-                            listed HTTP Paths. Multiple paths are OR''d together.
+                            listed HTTP Paths. Multiple paths are OR d together.
                             e.g: - exact: /foo - prefix: /bar NOTE: Each entry may
                             ONLY specify either a `exact` or a `prefix` match. The
                             validator will check for it.'
@@ -2969,7 +2969,7 @@ spec:
                         paths:
                           description: 'Paths is an optional field that restricts
                             the rule to apply to HTTP requests that use one of the
-                            listed HTTP Paths. Multiple paths are OR''d together.
+                            listed HTTP Paths. Multiple paths are OR d together.
                             e.g: - exact: /foo - prefix: /bar NOTE: Each entry may
                             ONLY specify either a `exact` or a `prefix` match. The
                             validator will check for it.'

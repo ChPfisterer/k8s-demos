@@ -10,7 +10,10 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-echo "Install calico network interface"
-kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+#echo "Install calico network interface"
+#kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+
+echo "Install flannel network interface"
+kubectl apply -f /k8s-setup/kube-flannel.yml
 
 kubectl get nodes

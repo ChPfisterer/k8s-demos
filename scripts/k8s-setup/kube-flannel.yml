@@ -47,7 +47,7 @@ spec:
     rule: 'RunAsAny'
 ---
 kind: ClusterRole
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: flannel
 rules:
@@ -76,7 +76,7 @@ rules:
   - patch
 ---
 kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: flannel
 roleRef:
@@ -125,7 +125,7 @@ data:
     }
   net-conf.json: |
     {
-      "Network": "192.168.0.0/16",
+      "Network": "10.244.0.0/16",
       "Backend": {
         "Type": "vxlan"
       }
